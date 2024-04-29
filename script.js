@@ -4,7 +4,7 @@ let btn = document.querySelector("#new-quote");
 let quote = document.querySelector(".quote");
 let person = document.querySelector(".person");
 
-const quotes = [
+let quotes = [
     {
         quote: "The way to get started is to quit talking and begin doing.",
         author: "Walt Disney"
@@ -86,15 +86,17 @@ const quotes = [
         author: "Robert Frost"
     }
 ];
+    
  
 const showNextQuote = () => {
     // equation to generate a random integer index from the quotes array and rorund it down to the nearest whole number
 
-    let random = Math.floor(Math.random() * quotes.length);
-    console.log(random)
+    
 
-    quote.innerText = quotes[random].quote;
-    person.innerText = quotes[random].author;
+    let randomQuote = Math.floor(Math.random() * quotes.length);
+
+    quote.innerText = quotes[randomQuote].quote;
+    person.innerText = quotes[randomQuote].author;
 
 }
 
